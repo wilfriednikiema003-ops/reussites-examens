@@ -1,0 +1,188 @@
+:root {
+    --marron-fonce: #5D4037;
+    --marron-clair: #8D6E63;
+    --creme: #FFFDF5;
+    --blanc: #FFFFFF;
+}
+
+body {
+    margin: 0; font-family: 'Poppins', sans-serif;
+    background-color: var(--creme); color: var(--marron-fonce);
+    display: flex; flex-direction: column; align-items: center;
+}
+
+/* LOGO - Taille Normale */
+.site-logo { width: 150px; height: auto; border-radius: 50%; margin-bottom: 20px; }
+
+/* CITATION */
+.citation {
+    max-width: 600px; margin: 0 auto 30px auto;
+    font-family: 'Playfair Display', serif; font-style: italic;
+    color: var(--marron-clair); line-height: 1.4;
+}
+.citation span { display: block; margin-top: 10px; font-weight: bold; font-style: normal; font-size: 0.9rem; }
+
+.hero { text-align: center; padding: 40px 20px; width: 100%; }
+
+/* BARRE DE RECHERCHE */
+.search-box {
+    display: flex; background: white; padding: 5px; border-radius: 50px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05); margin: 0 auto; width: fit-content;
+}
+.search-box input { border: none; padding: 12px 20px; width: 280px; border-radius: 50px; outline: none; }
+.search-box button { background: var(--marron-fonce); color: white; border: none; padding: 10px 25px; border-radius: 50px; cursor: pointer; }
+
+/* CARTES */
+.container { max-width: 1100px; width: 90%; }
+.categories, .grid-matieres {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px; margin-top: 30px;
+}
+.card, .matiere-card {
+    background: white; padding: 25px; border-radius: 15px;
+    text-align: center; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+.card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+.card h3 { font-size: 1rem; margin-bottom: 15px; }
+
+.btn-explorer {
+    display: inline-block; text-decoration: none;
+    border: 1.5px solid var(--marron-fonce); color: var(--marron-fonce);
+    padding: 8px 20px; border-radius: 20px; font-size: 0.9rem; font-weight: 600;
+}
+.btn-explorer:hover { background: var(--marron-fonce); color: white; }
+
+/* PARTAGE */
+.share-section { margin: 50px 0; width: 100%; }
+.share-card { background: #EFEBE9; padding: 30px; border-radius: 20px; text-align: center; border: 2px dashed var(--marron-clair); }
+.btn-main { background: var(--marron-fonce); color: white; border: none; padding: 12px 30px; border-radius: 50px; cursor: pointer; font-weight: bold; }
+
+footer { padding: 30px; color: var(--marron-clair); fo/* DESIGN DU TABLEAU DES SUJETS */
+.sujets-container {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    overflow-x: auto; /* Pour le mobile */
+}
+
+.sujets-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.sujets-table th {
+    padding: 15px;
+    border-bottom: 2px solid var(--creme);
+    color: var(--marron-clair);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.sujets-table td {
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.btn-download {
+    background: #4CAF50; /* Vert pour le téléchargement */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-download:hover {
+    background: #388E3C;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}nt-size: 0.8rem; }/* STYLE DU NOUVEAU PIED DE PAGE */
+.site-footer {
+    width: 100%;
+    background-color: #EFEBE9; /* Un marron très léger pour séparer du reste */
+    padding: 40px 20px;
+    margin-top: 60px;
+    text-align: center;
+    border-top: 3px solid var(--marron-clair);
+}
+
+.citation-footer {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--marron-fonce);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.citation-footer span {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 0.9rem;
+}
+
+.credits {
+    margin-top: 20px;
+    color: var(--marron-clair);
+    font-size: 0.95rem;
+}
+
+.credits strong {
+    color: var(--marron-fonce);
+}
+
+.credits a {
+    color: var(--marron-fonce);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.credits a:hover {
+    text-decoration: underline;
+}
+/* Ajustement de la section de partage */
+.share-buttons-container {
+    display: flex;
+    flex-direction: column; /* Aligne les boutons verticalement */
+    gap: 15px; /* Espace entre les boutons */
+    margin-top: 20px;
+    align-items: center;
+}
+
+.btn-share {
+    display: block;
+    width: 100%; /* Prend toute la largeur disponible */
+    max-width: 250px; /* Mais pas plus de 250px pour rester joli */
+    padding: 12px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: white !important; /* Force la couleur blanche pour le texte */
+    transition: transform 0.2s;
+}
+
+.btn-share:hover {
+    transform: scale(1.05);
+}
+
+.whatsapp {
+    background-color: #25D366; /* Couleur WhatsApp */
+}
+
+.email {
+    background-color: #5D4037; /* Ton marron foncé */
+}
+
+/* On ajuste la carte de partage pour qu'elle soit plus souple */
+.share-card {
+    padding: 25px 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+

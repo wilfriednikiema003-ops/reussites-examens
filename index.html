@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sujets & Savoir | Accueil</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:italic,wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo Sujets & Savoir" class="site-logo">
+        </div>
+        
+        <div class="citation">
+            <p>"L'éducation est l'arme la plus puissante qu'on puisse utiliser pour changer le monde."</p>
+            <span>— Nelson Mandela</span>
+        </div>
+<div class="search-box">
+    <input type="text" id="recherche-input" list="matieres-list" placeholder="Rechercher une matière (Maths, Droit...)">
+    
+    <datalist id="matieres-list">
+        <option value="Mathématiques Collège">
+        <option value="Physique-Chimie Collège">
+        <option value="SVT Collège">
+        <option value="Histoire-Géographie Collège">
+        <option value="Français Collège">
+        
+        <option value="Mathématiques Lycée">
+        <option value="Physique-Chimie Lycée">
+        <option value="Philosophie">
+        <option value="Anglais">
+        <option value="Français Lycée">
+        <option value="SVT Lycée">
+        
+        <option value="Droit">
+        <option value="Informatique">
+        <option value="Médecine">
+        <option value="Économie-Gestion">
+        <option value="Lettres-Sociologie">
+        
+        <option value="Examens (BAC, BEPC)">
+        <option value="Livres & Documents">
+    </datalist>
+    
+    <button>Rechercher</button>
+</div>
+        
+    </header>
+
+    <main class="container">
+        <section class="categories">
+            <div class="card">
+                <div class="card-icon">📖</div>
+                <h3>Collège (6ème à 3ème)</h3>
+                <a href="college.html" class="btn-explorer">Explorer</a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🎓</div>
+                <h3>Lycée (2nde à Tle)</h3>
+                <a href="lycee.html" class="btn-explorer">Explorer</a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🏛️</div>
+                <h3>Université</h3>
+                <a href="universite.html" class="btn-explorer">Explorer</a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📝</div>
+                <h3>Examens Nationaux</h3>
+                <a href="examens.html" class="btn-explorer">Explorer</a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📚</div>
+                <h3>Livres & Documents</h3>
+                <a href="documents.html" class="btn-explorer">Explorer</a>
+            </div>
+    <section class="share-section">
+    <div class="share-card">
+        <h3>📤 Partager un document</h3>
+        <p>Vous avez un sujet ou un livre à partager ? Envoyez-le moi directement !</p>
+        
+        <div class="share-buttons-container">
+            <a href="https://wa.me/22654361781?text=Bonjour Wilfried, je souhaite partager un document pour le site." 
+               target="_blank" class="btn-share whatsapp">
+               Partager via WhatsApp
+            </a>
+            
+            <a href="mailto:wilfriednikiema003@gmail.com?subject=Partage de document - Sujets & Savoir" 
+               class="btn-share email">
+               Envoyer par Email
+            </a>
+        </div>
+    </div>
+</section>
+    </main>
+
+</html><footer class="site-footer">
+        <div class="citation-footer">
+            <p>"L'éducation est l'arme la plus puissante qu'on puisse utiliser pour changer le monde."</p>
+            <span>— Nelson Mandela</span>
+        </div>
+
+        <hr style="width: 50%; border: 0.5px solid rgba(141, 110, 99, 0.2); margin: 20px auto;">
+
+        <div class="credits">
+            <p>Site web pensé et créé par un étudiant en <strong>MPCI</strong> au <strong>Centre Universitaire de Banfora</strong>.</p>
+            <p>
+                Contact : <a href="mailto:wilfriednikiema003@gmail.com">wilfriednikiema003@gmail.com</a> | 
+                WhatsApp : <a href="https://wa.me/22654361781" target="_blank">+226 54 36 17 81</a>
+            </p>
+            <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.8;">&copy; 2026 Sujets & Savoir - Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script>
+    function faireRecherche() {
+        const input = document.getElementById('recherche-input');
+        let saisie = input.value.toLowerCase().trim();
+
+        // Logique de redirection
+        if (saisie.includes("math") && saisie.includes("collège")) {
+            window.location.href = "math-college.html";
+        } 
+        else if (saisie.includes("math") && saisie.includes("lycée")) {
+            window.location.href = "math-lycee.html";
+        }
+        else if (saisie.includes("math")) {
+            window.location.href = "math-college.html"; // Par défaut
+        }
+        else if (saisie.includes("physique") || saisie.includes("chimie") || saisie.includes("pc")) {
+            if (saisie.includes("lycée")) window.location.href = "physique-chimie-lycee.html";
+            else window.location.href = "physique-chimie-college.html";
+        }
+        else if (saisie.includes("philo")) {
+            window.location.href = "phylosophie-lycee.html";
+        }
+        else if (saisie.includes("droit")) {
+            window.location.href = "droit.html";
+        }
+        else if (saisie.includes("info")) {
+            window.location.href = "informatique.html";
+        }
+        else if (saisie.includes("medecine") || saisie.includes("santé")) {
+            window.location.href = "medecine.html";
+        }
+        else if (saisie.includes("examen") || saisie.includes("bac") || saisie.includes("bepc")) {
+            window.location.href = "examens.html";
+        }
+        else if (saisie === "") {
+            alert("Veuillez choisir ou taper une matière.");
+        }
+        else {
+            alert("Matière non trouvée. Essayez d'utiliser les suggestions qui s'affichent !");
+        }
+    }
+
+    // Liaison aux événements
+    document.querySelector('.search-box button').onclick = (e) => { e.preventDefault(); faireRecherche(); };
+    document.getElementById('recherche-input').onkeypress = (e) => { if (e.key === 'Enter') { e.preventDefault(); faireRecherche(); } };
+</script>
+        
+    </body>
